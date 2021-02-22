@@ -1,6 +1,6 @@
 # Results for hate-speech-classification
 
-##distilBERT
+## distilBERT
 
 ![Confusion matrix_bert](images/distilbert.png)
 ![Confusion matrix_bert2](images/distilbert_norm.png)
@@ -14,7 +14,7 @@
     macro avg       0.81      0.77      0.78      2479
     weighted avg    0.92      0.93      0.92      2479
 
-##LSTM
+## LSTM
 ![Confusion matrix_lstm](images/lstm.png)
 ![Confusion matrix_lstm2](images/lstm_norm.png)
 
