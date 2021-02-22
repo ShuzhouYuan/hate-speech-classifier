@@ -1,6 +1,7 @@
 # Results for hate-speech-classification
 
 ## DistilBERT
+pretrained DistilBERT model trained for 4 epochs
 
 ![Confusion matrix_bert](images/distilbert.png)
 ![Confusion matrix_bert2](images/distilbert_norm.png)
@@ -15,6 +16,8 @@
     weighted avg    0.92      0.93      0.92      2479
 
 ## LSTM
+LSTM model trained for 10 epochs
+
 ![Confusion matrix_lstm](images/lstm.png)
 ![Confusion matrix_lstm2](images/lstm_norm.png)
 
