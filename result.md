@@ -1,14 +1,14 @@
 # Results for hate-speech-classification
 
-## distilBERT
+## DistilBERT
 
 ![Confusion matrix_bert](images/distilbert.png)
 ![Confusion matrix_bert2](images/distilbert_norm.png)
     
                 precision    recall  f1-score   support
-        hate       0.60      0.40      0.48       139
-    offensive      0.95      0.97      0.96      1895
-     neither       0.90      0.93      0.91       445
+        hate       	0.60      0.40      0.48       139
+    offensive      	0.95      0.97      0.96      1895
+     neither       	0.90      0.93      0.91       445
 
     accuracy                            0.93      2479
     macro avg       0.81      0.77      0.78      2479
