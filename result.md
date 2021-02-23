@@ -1,19 +1,19 @@
 # Results for hate-speech-classification
 
 ## DistilBERT
-pretrained DistilBERT model trained for 4 epochs
+pretrained DistilBERT model trained for 5 epochs
 
 ![Confusion matrix_bert](images/distilbert.png)
 ![Confusion matrix_bert2](images/distilbert_norm.png)
     
-                precision    recall  f1-score   support
-        hate       	0.60      0.40      0.48       139
-    offensive      	0.95      0.97      0.96      1895
-     neither       	0.90      0.93      0.91       445
+                 precision    recall  f1-score   support
+        hate        0.53      0.22      0.31       139	
+    offensive       0.93      0.97      0.95      1895
+      neither       0.88      0.91      0.90       445
 
-    accuracy                            0.93      2479
-    macro avg       0.81      0.77      0.78      2479
-    weighted avg    0.92      0.93      0.92      2479
+    accuracy                            0.92      2479	
+    macro avg       0.78      0.70      0.72      2479
+    weighted avg    0.90      0.92      0.91      2479
 
 ## LSTM
 LSTM model trained for 10 epochs
