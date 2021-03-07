@@ -34,8 +34,8 @@ LSTM model trained for 10 epochs
 
 without rebalancing training data (only 6% hate speech)
 
-![Confusion matrix_2label](images/nobalance without normalization.png)
-![Confusion matrix_2label2](images/nobalance with normalization.png)
+![Confusion matrix_2label](images/nobalance_without_normalization.png)
+![Confusion matrix_2label2](images/nobalance_with_normalization.png)
 
                     precision    recall  f1-score   support
 
@@ -48,8 +48,8 @@ without rebalancing training data (only 6% hate speech)
     
 rebalanced the training data with 50:50
 
-![Confusion matrix_2label](images/rebalance without normalization.png)
-![Confusion matrix_2label2](images/rebalance with norm.png)
+![Confusion matrix_2label](images/rebalance_without_normalization.png)
+![Confusion matrix_2label2](images/rebalance_with_norm.png)
 
                     precision    recall  f1-score   support
 
