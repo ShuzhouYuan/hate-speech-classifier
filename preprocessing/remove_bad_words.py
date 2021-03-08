@@ -46,10 +46,10 @@ class BadWordsRemover:
 
 if __name__ == '__main__':
     train_s = BadWordsRemover('../data/train.csv', bad_words)
-    train_s.save_new_csv('<SWEAR>', 'train_<SWAER>.csv')
+    train_s.save_new_csv('<SWEAR>', 'train_<SWEAR>.csv')
 
     test_s =BadWordsRemover('../data/test.csv', bad_words)
-    test_s.save_new_csv('<SWEAR>', 'test_<SWAER>.csv')
+    test_s.save_new_csv('<SWEAR>', 'test_<SWEAR>.csv')
 
     train_blank = BadWordsRemover('../data/train.csv', bad_words)
     train_blank.save_new_csv(' ', 'train_blank.csv')
