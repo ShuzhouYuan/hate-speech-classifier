@@ -13,15 +13,15 @@ tokenizer = BertTokenizer.from_pretrained('bert-base-uncased', do_lower_case=Tru
 
 batch_size = 32
 
-with open('encoded_data', "rb") as file:
+with open('data_for_lstm', "rb") as file:
   train_dataset, test_dataset = pickle.load(file)
 
 train_dataloader = DataLoader(train_dataset, sampler = RandomSampler(train_dataset), batch_size = batch_size)
 test_dataloader = DataLoader(test_dataset, sampler = SequentialSampler(test_dataset), batch_size = batch_size)
 
-lstm = LSTM(tokenizer.vocab_size, 300, 300, 3)
+lstm = LSTM(tokenizer.vocab_size, 300, 300, 2)
 lstm = lstm.to(DEVICE)
-print('from imported model')
+print('from imported model and data')
 
 optimizer = torch.optim.AdamW(lstm.parameters(), lr = 0.001)
 loss_function = nn.CrossEntropyLoss()
