@@ -8,9 +8,9 @@ import nltk
 nltk.download('averaged_perceptron_tagger')
 
 porter = PorterStemmer()
-
+'''
 bad_words = []
-with open('../data/bad-words.txt') as f:
+with open('bad_words_in_hate.txt') as f:
     for word in f:
         word = word.strip().lower()
         bad_words.append(word)
@@ -21,6 +21,18 @@ word_tag={word:tag for word,tag in words_tag}
 tags = set(word_tag.values())
 tags = ['<SWEAR-' + tag + '>' for tag in tags]
 print(tags)
+'''
+word_and_cluster = {}
+bad_words = []
+with open('bad_words_clustering_5.txt','r') as f:
+    for line in f:
+        word, tag = line.split()
+        bad_words.append(word)
+        word_and_cluster[word] = tag
+print(word_and_cluster)
+
+
+
 
 class BadWordsRemover:
     def __init__(self, file_path, bad_words):
@@ -40,7 +52,7 @@ class BadWordsRemover:
             for i in range(len(words)):
                 word_origin = porter.stem(words[i].lower())
                 if word_origin in self.bad_words:
-                    words[i] = '<SWEAR-' + word_tag[word_origin] + '>'
+                    words[i] = '<SWEAR-' + word_and_cluster[word_origin] + '>'
             #contain_bad.append(1) if TOK in words else contain_bad.append(0)
             words = ' '.join(words)
             new_tweets.append(words)
@@ -68,7 +80,7 @@ if __name__ == '__main__':
     test_blank.save_new_csv(' ', 'test_blank.csv')
     '''
     train_tag = BadWordsRemover('../data/train.csv', bad_words)
-    train_tag.save_new_csv('<SWEAR>', 'train_tag.csv')
+    train_tag.save_new_csv('<SWEAR>', 'train_cluster_5.csv')
 
     test_tag = BadWordsRemover('../data/test.csv', bad_words)
-    test_tag.save_new_csv('<SWEAR>', 'test_tag.csv')
+    test_tag.save_new_csv('<SWEAR>', 'test_cluster_5.csv')
