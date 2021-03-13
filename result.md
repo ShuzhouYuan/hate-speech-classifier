@@ -3,8 +3,8 @@
 ## DistilBERT
 pretrained DistilBERT model trained for 5 epochs
 
-![Confusion matrix_bert](images/distilbert.png)
-![Confusion matrix_bert2](images/distilbert_norm.png)
+![Confusion matrix_bert](images/3class/distilbert.png)
+![Confusion matrix_bert2](images/3class/distilbert_norm.png)
     
                  precision    recall  f1-score   support
         hate        0.53      0.22      0.31       139	
@@ -18,8 +18,8 @@ pretrained DistilBERT model trained for 5 epochs
 ## LSTM
 LSTM model trained for 10 epochs
 
-![Confusion matrix_lstm](images/lstm.png)
-![Confusion matrix_lstm2](images/lstm_norm.png)
+![Confusion matrix_lstm](images/3class/lstm.png)
+![Confusion matrix_lstm2](images/3class/lstm_norm.png)
 
                  precision    recall  f1-score   support
         hate        0.62      0.12      0.19       139
@@ -34,8 +34,8 @@ LSTM model trained for 10 epochs
 
 without rebalancing training data (only 6% hate speech)
 
-![Confusion matrix_2label](images/nobalance_without_normalization.png)
-![Confusion matrix_2label2](images/nobalance_with_normalization.png)
+![Confusion matrix_2label](images/2class/nobalance_without_normalization.png)
+![Confusion matrix_2label2](images/2class/nobalance_with_normalization.png)
 
                     precision    recall  f1-score   support
 
@@ -48,8 +48,8 @@ without rebalancing training data (only 6% hate speech)
     
 rebalanced the training data with 50:50
 
-![Confusion matrix_2label](images/rebalance_without_normalization.png)
-![Confusion matrix_2label2](images/rebalance_with_norm.png)
+![Confusion matrix_2label](images/2class/rebalance_without_normalization.png)
+![Confusion matrix_2label2](images/2class/rebalance_with_norm.png)
 
                     precision    recall  f1-score   support
 

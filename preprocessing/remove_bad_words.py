@@ -4,9 +4,6 @@ from nltk.tokenize import word_tokenize
 from nltk.stem import PorterStemmer
 import nltk
 
-
-nltk.download('averaged_perceptron_tagger')
-
 porter = PorterStemmer()
 '''
 bad_words = []
@@ -24,13 +21,12 @@ print(tags)
 '''
 word_and_cluster = {}
 bad_words = []
-with open('bad_words_clustering_5.txt','r') as f:
+with open('bad_words_clustering_10.txt','r') as f:
     for line in f:
         word, tag = line.split()
         bad_words.append(word)
         word_and_cluster[word] = tag
 print(word_and_cluster)
-
 
 
 
@@ -80,7 +76,7 @@ if __name__ == '__main__':
     test_blank.save_new_csv(' ', 'test_blank.csv')
     '''
     train_tag = BadWordsRemover('../data/train.csv', bad_words)
-    train_tag.save_new_csv('<SWEAR>', 'train_cluster_5.csv')
+    train_tag.save_new_csv('<SWEAR>', 'train_cluster_10.csv')
 
     test_tag = BadWordsRemover('../data/test.csv', bad_words)
-    test_tag.save_new_csv('<SWEAR>', 'test_cluster_5.csv')
+    test_tag.save_new_csv('<SWEAR>', 'test_cluster_10.csv')
