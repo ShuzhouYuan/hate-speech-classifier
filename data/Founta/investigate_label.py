@@ -21,5 +21,5 @@ for l in labels:
         num_label.append(3)
 print(len(num_label))
 df['num_label'] = num_label
-print(df)
-df.to_csv('./hatespeech_text_label_Founta_1.csv')
+#print(df)
+#df.to_csv('./hatespeech_text_label_Founta_1.csv')
