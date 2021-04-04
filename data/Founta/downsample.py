@@ -20,11 +20,13 @@ print(num_0, num_1, num_2, num_3)
 #data_frame_2 = data_frame_2[:num_0]
 
 data_frame_3 = data_frame_3.sample(frac=1)
-data_frame_3 = data_frame_3[:num_1]
+data_frame_3 = data_frame_3[:num_2]
 
-new_df = [data_frame_0, data_frame_1, data_frame_2, data_frame_3]
+data_frame_3['num_label'] = 2
+
+new_df = [data_frame_0, data_frame_1, data_frame_3]
 result = pd.concat(new_df)
 result = result.sample(frac=1)
 print((result))
 
-result.to_csv('./train_downsampled.csv')
+result.to_csv('./train_downsampled_without_spam.csv')
