@@ -16,7 +16,7 @@ bad_words = list(set(bad_words))
 
 #print(bad_words)
 
-df = pd.read_csv('./Davidson/test.csv')
+df = pd.read_csv('./Founta/without_spam/test.csv')
 tweets = df.tweet.values
 
 bad = []
@@ -36,4 +36,4 @@ for t in tweets:
 print(len(bad))
 print(bad.count(0))
 df['contain_bad'] = bad
-df.to_csv('./Davidson/test-1.csv')
+df.to_csv('./Founta/without_spam/test-1.csv')

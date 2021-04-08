@@ -12,8 +12,8 @@ num_1 = len(data_frame_1)
 num_2 = len(data_frame_2)
 print(num_0, num_1, num_2)
 
-#data_frame_1 = data_frame_1.sample(frac=1)
-#data_frame_1 = data_frame_1[:num_0]
+data_frame_1 = data_frame_1.sample(frac=1)
+data_frame_1 = data_frame_1[:num_0]
 
 data_frame_2 = data_frame_2.sample(frac=1)
 data_frame_2 = data_frame_2[:num_0]
@@ -28,4 +28,4 @@ result = pd.concat(new_df)
 result = result.sample(frac=1)
 print((result))
 
-result.to_csv('./train_down.csv')
+result.to_csv('./train_re_3.csv')
